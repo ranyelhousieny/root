@@ -1,12 +1,37 @@
 <single-spa-router>
-  <!--
+  <h1>From Layout</h1>
+  <main>
+    <route path="/" exact>
+      <application
+        name="@rany/home"
+      ></application>
+    </route>
+    <route path="/payment">
+      <application
+        name="@rany/Payment"
+      ></application>
+    </route>
+    <redirect
+      from="pay"
+      to="payment"
+    ></redirect>
+    <route default>
+      <h1>404 Not Found</h1>
+      <application
+        name="@rany/mfe1"
+      ></application>
+    </route>
+  </main>
+</single-spa-router>
+
+<!--
 
     This is the single-spa Layout Definition for your microfrontends.
     See https://single-spa.js.org/docs/layout-definition/ for more information.
 
   -->
 
-  <!-- Example layouts you might find helpful:
+<!-- Example layouts you might find helpful:
 
   <nav>
     <application name="@org/navbar"></application>
@@ -16,12 +41,3 @@
   </route>
 
   -->
-
-  <main>
-    <route default>
-      <application
-        name="@rany/mfe1"
-      ></application>
-    </route>
-  </main>
-</single-spa-router>
