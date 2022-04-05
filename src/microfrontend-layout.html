@@ -2,15 +2,25 @@
   <h1>From Layout</h1>
   <main>
     <route path="/" exact>
-      <application name="@rany/home"></application>
+      <application
+        name="@rany/home"
+      ></application>
     </route>
     <route path="/payment">
-      <application name="@rany/Payment"></application>
+      <application
+        name="@rany/Payment"
+        props="myProp"
+      ></application>
     </route>
-    <redirect from="pay" to="payment"></redirect>
+    <redirect
+      from="pay"
+      to="payment"
+    ></redirect>
     <route default>
       <h1>404 Not Found</h1>
-      <application name="@rany/mfe1"></application>
+      <application
+        name="@rany/mfe1"
+      ></application>
     </route>
   </main>
 </single-spa-router>
