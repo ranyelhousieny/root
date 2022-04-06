@@ -1,33 +1,19 @@
 <single-spa-router>
-  <application
-    name="@rany/navbar"
-  ></application>
+  <application name="@rany/navbar"></application>
 
   <main>
     <route path="/" exact>
-      <application
-        name="@rany/home"
-      ></application>
+      <application name="@rany/home"></application>
     </route>
     <route path="/payment">
-      <application
-        name="@rany/Payment"
-        props="myProp"
-      ></application>
-      <application
-        name="@rany/mfe1"
-      ></application>
+      <application name="@rany/Payment" props="myProp"></application>
+      <application name="@rany/mfe1"></application>
     </route>
-    <redirect
-      from="pay"
-      to="payment"
-    ></redirect>
+    <redirect from="pay" to="payment"></redirect>
 
     <route default>
       <h1>404 Not Found</h1>
-      <application
-        name="@rany/mfe1"
-      ></application>
+      <application name="@rany/mfe1"></application>
     </route>
   </main>
 </single-spa-router>
